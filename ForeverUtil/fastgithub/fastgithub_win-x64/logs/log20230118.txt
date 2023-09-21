@@ -1,0 +1,622 @@
+2023-01-18T13:39:47.3820586+08:00 [INF]
+FastGithub.HttpServer
+已监听https://localhost:443，https反向代理服务启动完成
+
+2023-01-18T13:39:47.4315982+08:00 [INF]
+FastGithub.HttpServer
+已监听http://localhost:80，http反向代理服务启动完成
+
+2023-01-18T13:39:47.4335640+08:00 [INF]
+FastGithub.HttpServer
+已监听ssh://localhost:22，github的ssh反向代理服务启动完成
+
+2023-01-18T13:39:47.4345719+08:00 [INF]
+FastGithub.HttpServer
+已监听git://localhost:9418，github的git反向代理服务启动完成
+
+2023-01-18T13:39:47.5010470+08:00 [INF]
+FastGithub.AppHostedService
+FastGithub启动完成，当前版本为v2.1.4，访问 https://github.com/dotnetcore/fastgithub 关注新版本
+
+2023-01-18T13:39:54.3026868+08:00 [WRN]
+FastGithub.HttpServer.HttpReverseProxyMiddleware
+域名clients2.google.com可能已经被DNS污染，如果域名为本机域名，请解析为非回环IP
+
+2023-01-18T13:40:10.6988002+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+clients2.google.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:40:13.9873963+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.githubassets.com->127.0.0.1
+
+2023-01-18T13:40:13.9888316+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->127.0.0.1
+
+2023-01-18T13:40:13.9900491+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->127.0.0.1
+
+2023-01-18T13:40:13.9913812+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.githubassets.com->127.0.0.1
+
+2023-01-18T13:40:13.9924463+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->127.0.0.1
+
+2023-01-18T13:40:13.9933607+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->127.0.0.1
+
+2023-01-18T13:40:13.9940935+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->127.0.0.1
+
+2023-01-18T13:40:13.9963545+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.githubassets.com->::1
+
+2023-01-18T13:40:13.9973574+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->::1
+
+2023-01-18T13:40:13.9983187+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->127.0.0.1
+
+2023-01-18T13:40:13.9993161+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github.com->::1
+
+2023-01-18T13:40:17.0834039+08:00 [ERR]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://clients2.google.com/service/update2/crx responded 502 in 22754.2597 ms
+System.Net.Http.HttpRequestException: 找不到任何可成功连接的IP (172.217.163.46) (clients2.google.com:443)
+ ---> System.AggregateException: 找不到任何可成功连接的IP (172.217.163.46)
+ ---> FastGithub.Http.HttpConnectTimeoutException: 172.217.163.46
+   --- End of inner exception stack trace ---
+   at FastGithub.Http.HttpClientHandler.ConnectCallback(SocketsHttpConnectionContext context, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String , Int32 , HttpRequestMessage , Boolean , CancellationToken )
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String , Int32 , HttpRequestMessage , Boolean , CancellationToken )
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage , Boolean , CancellationToken )
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage , Boolean , CancellationToken )
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage )
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken )
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage , Boolean , CancellationToken )
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage , Boolean , Boolean , CancellationToken )
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage , Boolean , CancellationToken )
+   at FastGithub.Http.HttpClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at FastGithub.Http.HttpClient.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Yarp.ReverseProxy.Forwarder.HttpForwarder.SendAsync(HttpContext context, String destinationPrefix, HttpMessageInvoker httpClient, ForwarderRequestConfig requestConfig, HttpTransformer transformer)
+
+2023-01-18T13:40:19.3941181+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+avatars.githubusercontent.com->127.0.0.1
+
+2023-01-18T13:40:19.3950375+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+avatars.githubusercontent.com->::1
+
+2023-01-18T13:40:19.3956328+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+avatars.githubusercontent.com->127.0.0.1
+
+2023-01-18T13:40:19.4242007+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github-cloud.s3.amazonaws.com->127.0.0.1
+
+2023-01-18T13:40:19.4253991+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+github-cloud.s3.amazonaws.com->::1
+
+2023-01-18T13:40:19.4269165+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+user-images.githubusercontent.com->127.0.0.1
+
+2023-01-18T13:40:19.4281276+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+user-images.githubusercontent.com->::1
+
+2023-01-18T13:40:19.4288244+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+user-images.githubusercontent.com->127.0.0.1
+
+2023-01-18T13:40:19.4812841+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub responded 200 in 5182.7521 ms
+
+2023-01-18T13:40:19.8819497+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/dark-0c343b529849.css responded 200 in 501.1862 ms
+
+2023-01-18T13:40:19.8830351+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/code-34e623da8c8b.css responded 200 in 502.1784 ms
+
+2023-01-18T13:40:19.8870379+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_details-dialog-elemen-63debe-4a2f37f7419e.js responded 200 in 462.1507 ms
+
+2023-01-18T13:40:19.8875408+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_auto-complete-element_dist_index_js-node_modules_github_catalyst_-6afc16-fa4f01d20b81.js responded 200 in 461.9679 ms
+
+2023-01-18T13:40:19.8879698+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_selector-observer_dist_index_esm_js-58d8ed1c5cb7.js responded 200 in 463.1225 ms
+
+2023-01-18T13:40:19.8888130+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/light-719f1193e0c0.css responded 200 in 508.1074 ms
+
+2023-01-18T13:40:19.8897417+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_clipboard-copy-element_dist_index_esm_js-node_modules_github_mark-f079ea-692b8e7bcdfd.js responded 200 in 464.1534 ms
+
+2023-01-18T13:40:19.8923453+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_smoothscroll-polyfill_dist_smoothscroll_js-node_modules_stacktrace-parse-297da6-aaa32681a0b3.js responded 200 in 468.0268 ms
+
+2023-01-18T13:40:19.8959049+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_lit-html_lit-html_js-e954e8c01c93.js responded 200 in 470.1884 ms
+
+2023-01-18T13:40:19.8959020+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_alive-client_dist-bf5aa2-cb53b34c4b84.js responded 200 in 469.8645 ms
+
+2023-01-18T13:40:19.8961642+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-b4f804-93a75d194dbb.js responded 200 in 470.5801 ms
+
+2023-01-18T13:40:19.8962750+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_text-ex-3415a8-72e8230400a2.js responded 200 in 470.6514 ms
+
+2023-01-18T13:40:19.8964039+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/notifications-global-e6860013c1f3.js responded 200 in 469.2227 ms
+
+2023-01-18T13:40:19.8976416+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_hydro-analytics_ts-app_assets_modules_github_soft-nav_state_ts-ui_p-e465e4-e469c2f77782.js responded 200 in 471.4582 ms
+
+2023-01-18T13:40:19.8989530+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/element-registry-710dad493558.js responded 200 in 473.2535 ms
+
+2023-01-18T13:40:19.9007308+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_sticky-scroll-into-view_ts-7e13ff517846.js responded 200 in 473.7226 ms
+
+2023-01-18T13:40:19.9027287+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/environment-2c90116dd024.js responded 200 in 477.9503 ms
+
+2023-01-18T13:40:19.9032916+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_github_template-parts_lib_-273494-2c3a60646ab4.js responded 200 in 477.2032 ms
+
+2023-01-18T13:40:19.9037982+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_behaviors_keyboard-shortcuts-helper_ts-app_assets_modules_github_be-f5afdb-98b4d03b0025.js responded 200 in 476.702 ms
+
+2023-01-18T13:40:19.9044603+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_updatable-content_ts-be84ec1f2e05.js responded 200 in 477.4888 ms
+
+2023-01-18T13:40:19.9046350+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/github-elements-46e906651100.js responded 200 in 478.9552 ms
+
+2023-01-18T13:40:19.9050010+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-70450e-bdbaf1c3071b.js responded 200 in 477.7108 ms
+
+2023-01-18T13:40:19.9064178+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-9df1e61e03a4.js responded 200 in 479.2568 ms
+
+2023-01-18T13:40:19.9070055+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/wp-runtime-994853c431f8.js responded 200 in 482.7199 ms
+
+2023-01-18T13:40:19.9071169+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_ref-selector_ts-84c70b6231ce.js responded 200 in 479.8029 ms
+
+2023-01-18T13:40:19.9089361+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_github_hotkey_dist_-9fc4f4-0d86101e85d9.js responded 200 in 482.8819 ms
+
+2023-01-18T13:40:19.9091164+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/code-menu-dce8f7be715a.js responded 200 in 481.7604 ms
+
+2023-01-18T13:40:19.9095929+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/topic-suggestions-a1ce486d7931.js responded 200 in 482.2314 ms
+
+2023-01-18T13:40:19.9126309+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/codespaces-11d6abfc3264.js responded 200 in 485.2852 ms
+
+2023-01-18T13:40:19.9151503+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531-596c6d852b03.js responded 200 in 487.9554 ms
+
+2023-01-18T13:40:19.9166670+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/optimizely-f50d90dcc001.js responded 200 in 489.3339 ms
+
+2023-01-18T13:40:19.9193068+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_mini-th-85225b-d5c5eb0b8bb2.js responded 200 in 491.9338 ms
+
+2023-01-18T13:40:19.9213409+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/sessions-e3c1e2f679ed.js responded 200 in 493.9397 ms
+
+2023-01-18T13:40:20.1114009+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/8308014 responded 200 in 509.8812 ms
+
+2023-01-18T13:40:20.1125455+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/8308014 responded 200 in 511.1374 ms
+
+2023-01-18T13:40:20.1159996+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/16309962 responded 200 in 514.449 ms
+
+2023-01-18T13:40:20.1271655+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_virtualized-list_es_index_js-node_modules_github_memoize_dist_esm_index_-ced8cc-ffd5e4d6ee17.js responded 200 in 699.866 ms
+
+2023-01-18T13:40:20.1438422+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/28976837 responded 200 in 542.2956 ms
+
+2023-01-18T13:40:20.1532433+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/7604648 responded 200 in 551.7383 ms
+
+2023-01-18T13:40:20.1760922+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/7685462 responded 200 in 574.5191 ms
+
+2023-01-18T13:40:20.1835844+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_manuelpuyol_turbo_dist_turbo_es2017-esm_js-ac3bd901e26b.js responded 200 in 757.7669 ms
+
+2023-01-18T13:40:20.1956911+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_mini-throt-a33094-133bfae4158f.js responded 200 in 768.2636 ms
+
+2023-01-18T13:40:20.2526864+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/repositories-20c2387e7877.js responded 200 in 825.3067 ms
+
+2023-01-18T13:40:20.2700232+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/primer-031a7fd7c6cb.css responded 200 in 889.2382 ms
+
+2023-01-18T13:40:20.3085006+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/behaviors-57af3cf671b2.js responded 200 in 881.3295 ms
+
+2023-01-18T13:40:20.3477898+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/github-b351ad9a2d52.css responded 200 in 966.9109 ms
+
+2023-01-18T13:40:20.3759070+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://avatars.githubusercontent.com/u/35824750 responded 200 in 487.4505 ms
+
+2023-01-18T13:40:20.4087759+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/global-735461f76c33.css responded 200 in 1027.9191 ms
+
+2023-01-18T13:40:20.5083618+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/app_assets_modules_github_behaviors_user-content_ts-app_assets_modules_github_blob-anchor_ts--b39cba-0e34333f0071.js responded 200 in 1081.1853 ms
+
+2023-01-18T13:40:20.5096161+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_primer_view-components_app_components_primer_primer_js-node_modules_gith-6a1af4-18c0f3667dbb.js responded 200 in 1083.9608 ms
+
+2023-01-18T13:40:20.5935908+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_optimizely_optimizely-sdk_dist_optimizely_browser_es_min_js-node_modules-77839b-550a5f909f1b.js responded 200 in 1166.3712 ms
+
+2023-01-18T13:40:20.6327444+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/chunk-app_components_primer_experimental_toggle-switch-element_ts-8d9d1aec570e.js responded 200 in 63.4831 ms
+
+2023-01-18T13:40:20.6638849+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/vendors-node_modules_github_paste-markdown_dist_index_esm_js-node_modules_github_quote-select-84b903-e4c363354688.js responded 200 in 1237.7094 ms
+
+2023-01-18T13:40:20.7219696+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/assets/chunk-app_components_files_readme-toc-element_ts-1963841d0452.js responded 200 in 152.7117 ms
+
+2023-01-18T13:40:20.7706061+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+collector.github.com->127.0.0.1
+
+2023-01-18T13:40:20.7716610+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+collector.github.com->::1
+
+2023-01-18T13:40:20.7817568+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+api.github.com->127.0.0.1
+
+2023-01-18T13:40:20.7826890+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+api.github.com->::1
+
+2023-01-18T13:40:20.7836242+08:00 [INF]
+FastGithub.PacketIntercept.Dns.DnsInterceptor
+api.github.com->127.0.0.1
+
+2023-01-18T13:40:20.9012664+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/spoofed_commit_check/7765bc08628445e3b07a5dcfa2e2d76b4e44933a responded 200 in 326.2575 ms
+
+2023-01-18T13:40:20.9871539+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/manifest.json responded 200 in 207.922 ms
+
+2023-01-18T13:40:21.0254700+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/hovercards/citation/sidebar_partial responded 204 in 450.3875 ms
+
+2023-01-18T13:40:21.0499809+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/security/overall-count responded 200 in 474.9652 ms
+
+2023-01-18T13:40:21.0914267+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/used_by_list responded 200 in 516.3184 ms
+
+2023-01-18T13:40:21.0951586+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/overview_actions/master responded 200 in 520.1073 ms
+
+2023-01-18T13:40:21.1142488+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/commit/7765bc08628445e3b07a5dcfa2e2d76b4e44933a/rollup responded 200 in 539.183 ms
+
+2023-01-18T13:40:21.1804882+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/apple-touch-icon-144x144.png responded 200 in 189.254 ms
+
+2023-01-18T13:40:21.8611787+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 926.8883 ms
+
+2023-01-18T13:40:22.0509631+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://collector.github.com/github/collect responded 204 in 962.6189 ms
+
+2023-01-18T13:40:22.5433024+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 442.4197 ms
+
+2023-01-18T13:40:23.3054900+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/favicon.ico responded 200 in 83.5831 ms
+
+2023-01-18T13:40:26.7860889+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:40:29.2385332+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub responded 304 in 235.6373 ms
+
+2023-01-18T13:40:29.6375243+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/commit/7765bc08628445e3b07a5dcfa2e2d76b4e44933a/rollup responded 200 in 237.7749 ms
+
+2023-01-18T13:40:29.6380239+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/hovercards/citation/sidebar_partial responded 204 in 238.2892 ms
+
+2023-01-18T13:40:29.6411755+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/used_by_list responded 304 in 238.8446 ms
+
+2023-01-18T13:40:29.6724287+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://collector.github.com/github/collect responded 204 in 255.3261 ms
+
+2023-01-18T13:40:29.6790954+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/favicons/favicon-dark.svg responded 200 in 255.7191 ms
+
+2023-01-18T13:40:29.6833445+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 436.3461 ms
+
+2023-01-18T13:40:29.7474745+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.githubassets.com/favicons/favicon-dark.png responded 200 in 63.7381 ms
+
+2023-01-18T13:40:29.7609327+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/spoofed_commit_check/7765bc08628445e3b07a5dcfa2e2d76b4e44933a responded 304 in 361.6215 ms
+
+2023-01-18T13:40:29.8556987+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+GET https://github.com/dotnetcore/FastGithub/overview_actions/master responded 304 in 456.38 ms
+
+2023-01-18T13:40:30.1424016+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 719.0231 ms
+
+2023-01-18T13:40:31.0202420+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 481.9783 ms
+
+2023-01-18T13:40:31.0225639+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 439.947 ms
+
+2023-01-18T13:40:32.0011425+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+github.com:443->[20.27.177.113]
+
+2023-01-18T13:40:33.1676784+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 576.0138 ms
+
+2023-01-18T13:40:33.4197880+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.githubassets.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:40:33.6393770+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+github.githubassets.com:443->[185.199.109.154, 185.199.108.154, 185.199.110.154]
+
+2023-01-18T13:40:34.0973223+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+api.github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:40:34.4107390+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+api.github.com:443->[20.205.243.168]
+
+2023-01-18T13:40:35.0334986+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+avatars.githubusercontent.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:40:40.6065511+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+avatars.githubusercontent.com:443->[185.199.108.133, 185.199.110.133, 185.199.109.133]
+
+2023-01-18T13:40:42.0821189+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+collector.github.com:443->[140.82.112.22, 140.82.114.22, 140.82.114.21]
+
+2023-01-18T13:40:43.2139126+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+clients2.google.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:40:44.0536323+08:00 [INF]
+FastGithub.HttpServer.RequestLoggingMiddleware
+POST https://api.github.com/_private/browser/stats responded 200 in 443.549 ms
+
+2023-01-18T13:40:56.4470820+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+collector.github.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:03.9531367+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.githubassets.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:05.0789662+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+api.github.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:05.3957349+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+avatars.githubusercontent.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:14.0008811+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+clients2.google.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:41:19.7192369+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+github.com:443->[20.27.177.113, 140.82.121.4]
+
+2023-01-18T13:41:21.8851681+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+clients2.google.com:443->[142.250.66.46]
+
+2023-01-18T13:41:22.8626339+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+api.github.com:443->[20.205.243.168, 140.82.114.5]
+
+2023-01-18T13:41:27.6137647+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+collector.github.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:34.2261542+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.githubassets.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:35.8460592+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+api.github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:41:35.9799034+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+avatars.githubusercontent.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:44.2151563+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+clients2.google.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:41:53.4607551+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:41:58.6569041+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+collector.github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:42:05.9979782+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.githubassets.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:42:06.1441896+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+avatars.githubusercontent.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:42:07.4404302+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+api.github.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:42:28.5023832+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+api.github.com:443->[20.205.243.168, 20.248.137.49, 140.82.114.5]
+
+2023-01-18T13:42:30.5447586+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+collector.github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:42:36.6776076+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.githubassets.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:42:36.8040039+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+avatars.githubusercontent.com@119.29.29.29:53->Unexpected end of stream
+
+2023-01-18T13:42:40.0074821+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+api.github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:42:50.4697960+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+github.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:43:06.5126837+08:00 [INF]
+FastGithub.DomainResolve.DomainResolver
+collector.github.com:443->[140.82.113.21, 140.82.112.22, 140.82.114.22]
+
+2023-01-18T13:43:07.9868506+08:00 [WRN]
+FastGithub.DomainResolve.DnsClient
+avatars.githubusercontent.com@119.29.29.29:53->Invalid response received with code ServerFailure
+
+2023-01-18T13:43:09.0928689+08:00 [INF]
+FastGithub.AppHostedService
+正在主动关闭，因为父进程已退出
+

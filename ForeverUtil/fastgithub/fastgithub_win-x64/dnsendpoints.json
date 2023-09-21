@@ -1,0 +1,26 @@
+[
+  {
+    "host": "github.githubassets.com",
+    "port": 443
+  },
+  {
+    "host": "api.github.com",
+    "port": 443
+  },
+  {
+    "host": "avatars.githubusercontent.com",
+    "port": 443
+  },
+  {
+    "host": "clients2.google.com",
+    "port": 443
+  },
+  {
+    "host": "github.com",
+    "port": 443
+  },
+  {
+    "host": "collector.github.com",
+    "port": 443
+  }
+]
